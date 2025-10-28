@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Blokr - Site Blocker",
+  "short_name": "Blokr",
+  "version": "1.0.0",
+  "description": "Blocks access to specific websites. Supports multiple languages and custom blocklists.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "https://raw.githubusercontent.com/",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

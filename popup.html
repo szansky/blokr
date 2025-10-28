@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Site Blocker</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1><i class="fas fa-shield-alt"></i> <span id="title">Site Blocker</span></h1>
+
+        <div class="language-selector">
+            <label id="languageLabel">Language:</label>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="pl">Polski</option>
+                <option value="de">Deutsch</option>
+                <option value="zh">中文</option>
+                <option value="ru">Русский</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+
+        <div class="option-group">
+            <label>
+                <input type="radio" name="source" value="url" checked>
+                <span id="loadFromUrlLabel">Load list from URL</span>
+            </label>
+            <label>
+                <input type="radio" name="source" value="manual">
+                <span id="addManuallyLabel">Add sites manually</span>
+            </label>
+        </div>
+
+        <div class="input-group" id="urlGroup">
+            <label for="listUrl" id="urlLabel">URL to blocked sites list:</label>
+            <input type="text" id="listUrl" placeholder="https://raw.githubusercontent.com/..."
+                value="https://raw.githubusercontent.com/szansky/blokr/main/blockedSites.json">
+            <button id="loadList" class="button primary">
+                <i class="fas fa-download"></i> <span id="loadListButton">Load list</span>
+            </button>
+        </div>
+
+        <div class="input-group" id="manualGroup" style="display: none;">
+            <label for="manualSites" id="manualSitesLabel">Add sites manually (comma-separated):</label>
+            <textarea id="manualSites" placeholder="e.g.: pornhub.com, xvideos.com, xnxx.com"></textarea>
+            <button id="addManualSites" class="button primary">
+                <i class="fas fa-plus"></i> <span id="addManualSitesButton">Add sites</span>
+            </button>
+        </div>
+
+        <div class="status" id="status"></div>
+
+        <div class="button-group">
+            <button id="refreshRules" class="button success">
+                <i class="fas fa-sync-alt"></i> <span id="refreshRulesButton">Refresh rules</span>
+            </button>
+        </div>
+
+        <div class="current-sites">
+            <h3><i class="fas fa-list"></i> <span id="currentSitesLabel">Currently blocked sites:</span></h3>
+            <div id="currentSites"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

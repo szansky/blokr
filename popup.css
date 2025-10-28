@@ -1,0 +1,175 @@
+:root {
+  --bg-color: #1e1e2d;
+  --text-color: #e0e0e0;
+  --primary-color: #6c5ce7;
+  --success-color: #00b894;
+  --danger-color: #d63031;
+  --border-color: #343a46;
+  --input-bg: #2d3436;
+  --button-hover: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 350px;
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #adb5bd;
+}
+
+.input-group input {
+  padding: 8px 12px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button.primary:hover {
+  background-color: #5649c0;
+}
+
+.button.success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.button.success:hover {
+  background-color: #009f82;
+}
+
+.button.danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.button.danger:hover {
+  background-color: #b82326;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.status {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--input-bg);
+  color: #adb5bd;
+  min-height: 20px;
+}
+
+.current-sites {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.current-sites #currentSites {
+  font-size: 12px;
+  color: #adb5bd;
+  line-height: 1.4;
+}
+
+#currentSites.empty {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.option-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.option-group input[type="radio"] {
+  margin: 0;
+}
+
+#manualGroup textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 12px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  font-size: 13px;
+  resize: vertical;
+}
