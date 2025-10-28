@@ -1,4 +1,4 @@
-# Blokr - Site Blocker
+# Blokr - Site Blocker  - "version": "1.0.0",
 
 A simple browser extension to block access to specific websites. Supports multiple languages and custom blocklists.
 
