@@ -1,6 +1,7 @@
 [
   "*://*.pornhub.com/*",
- "https://zbiornik.com/",
+  "*://*.zbiornik.com/*",
+  "*://zbiornik.com/*",  
   "*://*.xvideos.com/*",
   "*://*.xnxx.com/*",
   "*://*.redtube.com/*",
@@ -90,7 +91,6 @@
   "*://*.porn44.com/*",
   "*://*.porn45.com/*",
   "*://*.datezone.com/*",
-  "*://*.zbiornik.com/*",
   "*://*.erotyk.pl/*",
   "*://*.porno.pl/*",
   "*://*.sex.pl/*",
